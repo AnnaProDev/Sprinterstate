@@ -55,3 +55,19 @@
 	}
 }
 
+@media (max-width: 479.98px) {
+	.container{
+		width: 100%;
+	}
+	.promo {
+		&_logo {
+			max-width: 70%;
+		}
+		&_button {
+			&:hover {
+				background-color: none;
+				cursor: none;
+			}
+		}
+	}
+}

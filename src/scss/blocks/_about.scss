@@ -44,7 +44,7 @@
 		flex-wrap: wrap;
 	}
 	&_info {
-		width: 600px;
+		max-width: 600px;
 		margin-right: 20px;
 		img {
 			margin-top: 25px;
@@ -60,7 +60,7 @@
 	}
 	&_list {
 		margin-top: 30px;
-		width: 500px;
+		max-width: 500px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -73,6 +73,7 @@
 				display: block;
 				position: absolute;
 				left: -30px;
+				top: -3px;
 				width: 21px;
 				height: 20px;
 				background: url("../../img/icons/icons8-done-26.png") center (center / cover) no-repeat;
@@ -80,6 +81,33 @@
 			&:last-child{
 				margin-bottom: 0;
 			}
+		}
+	}
+}
+
+@media (max-width: 1180px) {
+	.container{
+		max-width: 991.98px;
+	}
+	.about {
+		padding: 70px 30px;
+		&_items{
+			&:hover {
+				background:#fff;
+				color:#1490d7;;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.98px) {
+	.container{
+		max-width: 479.98;
+	}
+	.about {
+		padding: 70px 30px;
+		&_items {
+			justify-content: center;
 		}
 	}
 }
