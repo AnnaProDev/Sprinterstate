@@ -1,8 +1,8 @@
-header {
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 60px;
+	height: 80px;
 	background: rgba(255, 255, 255, 0.6);
 	overflow: hidden;
 	position: fixed;
@@ -12,6 +12,10 @@ header {
 }
 .logo {
 	display: block;
+	color: #000;
+	text-align: center;
+	letter-spacing: 2px;
+
 }
 .menu {
 	display: flex;
@@ -97,4 +101,10 @@ height: 24px;
 
 .logo {
 	max-width: 140px;
+}
+
+@media (max-width: 479.98px) {
+	.container{
+		width: 100%;
+	}
 }

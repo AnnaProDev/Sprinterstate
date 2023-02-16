@@ -111,3 +111,9 @@
 		}
 	}
 }
+
+@media (max-width: 575px) {
+	.about {
+		display: none;
+	}
+}

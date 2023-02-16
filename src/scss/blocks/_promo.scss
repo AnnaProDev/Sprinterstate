@@ -1,5 +1,6 @@
 .promo {
 	display: flex;
+	padding: 0 20px;
 	min-height: 100vh;
 	justify-content: center;
 	align-items: center;
@@ -8,11 +9,6 @@
 	background-position: center center;
 	width: 100%;
 	height: 100%;
-	&_logo {
-		display: block;
-		margin: auto;
-		max-width: 400px;
-	}
 	&_title {
 		margin-top: 20px;
 		font-size: 50px;
@@ -21,13 +17,21 @@
 		font-family: Impact, Charcoal, sans-serif;
 		text-align: center;
 	}
-	&_subtitle {
+	&_img {
+		display: flex;
+		justify-content: space-between;
+		height: 70px;
+		img {
+			border-radius: 10px;
+		}
+	}
+	&_descr {
+		display: block;
+		margin: 15px auto;
+		max-width: 500px;
 		font-size: 20px;
 		font-weight: 400;
-		letter-spacing: 15px;
 		color: #FFFFFF;
-		font-family: "Open Sans";
-		text-align: center;
 	}
 	&_button {
 		display: block;
@@ -60,8 +64,13 @@
 		width: 100%;
 	}
 	.promo {
-		&_logo {
-			max-width: 70%;
+		padding-top: 100px;
+		align-items:flex-start;
+		&_info {
+			height: 100%;
+		}
+		&_subtitle {
+			width: 80%;
 		}
 		&_button {
 			&:hover {

@@ -84,3 +84,12 @@
 		}
 	}
 }
+
+@media (max-width: 575px) {
+	.container{
+		max-width: 479.98;
+	}
+	.solutions {
+		display: none;
+	}
+}
