@@ -1,15 +1,15 @@
 .footer {
 	padding: 15px;
 	background-color: #000;
-	min-height: 140px;
+	min-height: 100px;
 	color: #fff;
 	&_title {
 		text-align: center;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: bold;
 	}
 	&_links {
-		margin-top: 15px;
+		margin-top: 10px;
 		display: flex;
 		justify-content: space-between;
 		a {
@@ -19,9 +19,9 @@
 	&_social {
 		display: flex;
 		justify-content: space-around;
-		margin-top: 20px;
+		margin-top: 10px;
 		text-align: center;
-		font-size: 24px;
+		font-size: 20px;
 		a {
 			color: #fff;
 		}
@@ -46,4 +46,28 @@
 		overflow: hidden;
 	}
 
+}
+
+@media (max-width: 575px) {
+	.container{
+		position: relative;
+	}
+	.footer {
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.4);
+		overflow: hidden;
+	}
+
+}
+
+@media (max-width: 479.98px) {
+	.container{
+		width: 100%;
+	}
+	.footer {
+		max-height: 100px;
+		padding: 10px;
+	}
 }

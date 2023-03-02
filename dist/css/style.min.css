@@ -193,16 +193,15 @@ body._lock {
 }
 .promo {
   display: flex;
-  padding: 0 20px;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-image: url(/../img/bg2-scaled-dark.jpg);
   background-position: center center;
+  padding: 100px 0 150px 0;
 }
 .promo_title {
-  margin-top: 20px;
   font-size: 50px;
   font-weight: 300;
   color: rgb(255, 255, 255);
@@ -214,16 +213,13 @@ body._lock {
   justify-content: space-between;
   height: 70px;
 }
-.promo_img img {
-  border-radius: 10px;
-}
 .promo_descr {
-  display: block;
-  margin: 15px auto;
+  margin: 20px auto;
   max-width: 500px;
   font-size: 20px;
   font-weight: 400;
   color: #FFFFFF;
+  text-align: center;
 }
 .promo_button {
   display: block;
@@ -239,7 +235,7 @@ body._lock {
   background-image: linear-gradient(0deg, #3498db 0%, #2980b9 100%);
 }
 .promo_button_phone {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 21px;
   font-weight: 500;
   color: rgb(255, 255, 255);
@@ -251,15 +247,27 @@ body._lock {
 }
 
 @media (max-width: 479.98px) {
-  .container {
+  .promo .container {
     width: 100%;
   }
-  .promo {
-    padding-top: 100px;
-    align-items: flex-start;
+  .promo_title {
+    font-size: 40px;
   }
   .promo_info {
-    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .promo_descr {
+    font-size: 14px;
+  }
+  .promo_img {
+    height: 50px;
+    width: 340px;
+  }
+  .promo_img img {
+    width: 25%;
   }
   .promo_button {
     background-image: none;
@@ -476,16 +484,16 @@ body._lock {
 .footer {
   padding: 15px;
   background-color: #000;
-  min-height: 140px;
+  min-height: 100px;
   color: #fff;
 }
 .footer_title {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 .footer_links {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -495,9 +503,9 @@ body._lock {
 .footer_social {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
 }
 .footer_social a {
   color: #fff;
@@ -520,8 +528,29 @@ body._lock {
     overflow: hidden;
   }
 }
+@media (max-width: 575px) {
+  .container {
+    position: relative;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+  }
+}
+@media (max-width: 479.98px) {
+  .container {
+    width: 100%;
+  }
+  .footer {
+    max-height: 100px;
+    padding: 10px;
+  }
+}
 .form {
-  padding: 70px 10px;
+  padding: 30px 10px;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-image: url(/../img/bg2-scaled-dark.jpg);
