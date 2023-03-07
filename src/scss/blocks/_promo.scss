@@ -4,9 +4,10 @@
 	justify-content: center;
 	align-items: center;
 	background-repeat: no-repeat;
-	background-image: url(/../img/bg2-scaled-dark.jpg);
+	background-image: url("@img/bg2-scaled-dark.jpg");
 	background-position: center center;
 	padding: 100px 0 150px 0;
+	animation: slide 3s infinite;
 	&_title {
 		font-size: 50px;
 		font-weight: 300;
@@ -50,6 +51,18 @@
 				color: rgb(255, 255, 255);
 			}
 		}
+	}
+}
+
+@keyframes slide {
+	0% {
+		background-image: url("/src/img/bg1.jpeg");
+	}
+	35% {
+		background-image: url("/src/img/bg2.jpeg");
+	}
+	68% {
+		background-image: url("/src/img/bg3.jpeg");
 	}
 }
 

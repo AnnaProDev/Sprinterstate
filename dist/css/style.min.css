@@ -197,9 +197,10 @@ body._lock {
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-image: url(/../img/bg2-scaled-dark.jpg);
+  background-image: url("@img/bg2-scaled-dark.jpg");
   background-position: center center;
   padding: 100px 0 150px 0;
+  animation: slide 3s infinite;
 }
 .promo_title {
   font-size: 50px;
@@ -246,6 +247,17 @@ body._lock {
   color: rgb(255, 255, 255);
 }
 
+@keyframes slide {
+  0% {
+    background-image: url("/src/img/bg1.jpeg");
+  }
+  35% {
+    background-image: url("/src/img/bg2.jpeg");
+  }
+  68% {
+    background-image: url("/src/img/bg3.jpeg");
+  }
+}
 @media (max-width: 479.98px) {
   .promo .container {
     width: 100%;
