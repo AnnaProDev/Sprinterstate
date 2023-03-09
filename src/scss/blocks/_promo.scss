@@ -4,10 +4,9 @@
 	justify-content: center;
 	align-items: center;
 	background-repeat: no-repeat;
-	background-image: url("@img/bg2-scaled-dark.jpg");
 	background-position: center center;
 	padding: 100px 0 150px 0;
-	animation: slide 3s infinite;
+	animation: slide 20s infinite;
 	&_title {
 		font-size: 50px;
 		font-weight: 300;
@@ -18,7 +17,9 @@
 	&_img {
 		display: flex;
 		justify-content: space-between;
-		height: 70px;
+		align-items: center;
+		height: 100%;
+		flex-wrap: wrap;
 	}
 	&_descr {
 		margin: 20px auto;
@@ -56,13 +57,19 @@
 
 @keyframes slide {
 	0% {
-		background-image: url("/src/img/bg1.jpeg");
+		background-image: url("../../img/bg4.jpeg");
 	}
-	35% {
-		background-image: url("/src/img/bg2.jpeg");
+	30% {
+		background-image: url("../../img/bg5.jpeg");
 	}
-	68% {
-		background-image: url("/src/img/bg3.jpeg");
+	60% {
+		background-image: url("../img/bg1.jpeg");
+	}
+	75% {
+		background-image: url("../img/bg3.jpeg");
+	}
+	100% {
+		background-image: url("../img/bg2.jpeg");
 	}
 }
 
@@ -84,10 +91,10 @@
 			font-size: 14px;
 		}
 		&_img {
-			height: 50px;
-			width: 340px;
+			width: 100%;
 			img {
 				width: 25%;
+				object-fit: cover;
 			}
 		}
 		&_button {

@@ -197,10 +197,9 @@ body._lock {
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-image: url("@img/bg2-scaled-dark.jpg");
   background-position: center center;
   padding: 100px 0 150px 0;
-  animation: slide 3s infinite;
+  animation: slide 20s infinite;
 }
 .promo_title {
   font-size: 50px;
@@ -212,7 +211,9 @@ body._lock {
 .promo_img {
   display: flex;
   justify-content: space-between;
-  height: 70px;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
 }
 .promo_descr {
   margin: 20px auto;
@@ -249,13 +250,19 @@ body._lock {
 
 @keyframes slide {
   0% {
-    background-image: url("/src/img/bg1.jpeg");
+    background-image: url("../../img/bg4.jpeg");
   }
-  35% {
-    background-image: url("/src/img/bg2.jpeg");
+  30% {
+    background-image: url("../../img/bg5.jpeg");
   }
-  68% {
-    background-image: url("/src/img/bg3.jpeg");
+  60% {
+    background-image: url("../img/bg1.jpeg");
+  }
+  75% {
+    background-image: url("../img/bg3.jpeg");
+  }
+  100% {
+    background-image: url("../img/bg2.jpeg");
   }
 }
 @media (max-width: 479.98px) {
@@ -275,11 +282,11 @@ body._lock {
     font-size: 14px;
   }
   .promo_img {
-    height: 50px;
-    width: 340px;
+    width: 100%;
   }
   .promo_img img {
     width: 25%;
+    object-fit: cover;
   }
   .promo_button {
     background-image: none;
