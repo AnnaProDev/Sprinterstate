@@ -200,7 +200,9 @@ body._lock {
   background-position: center center;
   background-size: cover;
   padding: 100px 0 150px 0;
-  animation: slide 10s ease infinite;
+  -webkit-animation: slide 15s infinite;
+  -moz-animation: slide 15s infinite;
+  animation: slide 15s ease infinite;
   transition: all 0.5s ease;
 }
 .promo_title {
@@ -256,12 +258,15 @@ body._lock {
 @keyframes slide {
   0% {
     background-image: url("../img/bg1.jpeg");
+    transition: all 0.5s ease;
   }
   50% {
     background-image: url("../img/bg3.jpeg");
+    transition: all 0.5s ease;
   }
   100% {
     background-image: url("../img/bg4.jpeg");
+    transition: all 0.5s ease;
   }
 }
 @media (max-width: 479.98px) {

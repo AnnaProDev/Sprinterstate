@@ -1,3 +1,4 @@
+import imagemin from "gulp-imagemin";
 import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
@@ -24,4 +25,4 @@ window.addEventListener('DOMContentLoaded', () => {
 	body.addEventListener('click', () => {
 		body.classList.toggle('lock');
 	});
-})
+});
