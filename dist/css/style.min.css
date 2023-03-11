@@ -198,8 +198,10 @@ body._lock {
   align-items: center;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   padding: 100px 0 150px 0;
-  animation: slide 20s infinite;
+  animation: slide 10s ease infinite;
+  transition: all 0.5s ease;
 }
 .promo_title {
   font-size: 50px;
@@ -209,11 +211,14 @@ body._lock {
   text-align: center;
 }
 .promo_img {
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  flex-wrap: wrap;
+}
+.promo_img img {
+  max-width: 25%;
+  height: 75px;
 }
 .promo_descr {
   margin: 20px auto;
@@ -230,7 +235,7 @@ body._lock {
   background-color: #3498db;
   padding: 12px 25px;
   border-radius: 30px;
-  margin-top: 40px;
+  margin-top: 100px;
   transition: all 0.5s ease-out;
 }
 .promo_button:hover {
@@ -250,22 +255,23 @@ body._lock {
 
 @keyframes slide {
   0% {
-    background-image: url("../../img/bg4.jpeg");
-  }
-  30% {
-    background-image: url("../../img/bg5.jpeg");
-  }
-  60% {
     background-image: url("../img/bg1.jpeg");
   }
-  75% {
+  50% {
     background-image: url("../img/bg3.jpeg");
   }
   100% {
-    background-image: url("../img/bg2.jpeg");
+    background-image: url("../img/bg4.jpeg");
   }
 }
 @media (max-width: 479.98px) {
+  .promo {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   .promo .container {
     width: 100%;
   }
@@ -282,18 +288,19 @@ body._lock {
     font-size: 14px;
   }
   .promo_img {
+    margin-top: 0;
     width: 100%;
   }
   .promo_img img {
-    width: 25%;
-    object-fit: cover;
+    height: 50px;
   }
   .promo_button {
     background-image: none;
     background-color: #3498db;
+    margin-top: 50px;
   }
   .promo_button:hover {
-    background-color: none;
+    background-image: none;
     cursor: none;
   }
 }
@@ -552,7 +559,7 @@ body._lock {
     position: relative;
   }
   .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
     background: rgba(255, 255, 255, 0.4);
@@ -572,7 +579,7 @@ body._lock {
   padding: 30px 10px;
   min-height: 100vh;
   background-repeat: no-repeat;
-  background-image: url(/../img/bg2-scaled-dark.jpg);
+  background-image: url("../img/bg4.jpeg");
   background-position: center center;
   color: #fff;
 }
