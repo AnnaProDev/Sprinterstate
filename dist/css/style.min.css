@@ -203,7 +203,7 @@ body._lock {
   -webkit-animation: slide 15s infinite;
   -moz-animation: slide 15s infinite;
   animation: slide 15s ease infinite;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .promo_title {
   font-size: 50px;
@@ -258,15 +258,15 @@ body._lock {
 @keyframes slide {
   0% {
     background-image: url("../img/bg1.jpeg");
-    transition: all 0.5s ease;
   }
-  50% {
+  33% {
+    background-image: url("../img/bg2.jpeg");
+  }
+  66% {
     background-image: url("../img/bg3.jpeg");
-    transition: all 0.5s ease;
   }
   100% {
     background-image: url("../img/bg4.jpeg");
-    transition: all 0.5s ease;
   }
 }
 @media (max-width: 479.98px) {
