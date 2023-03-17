@@ -6,10 +6,10 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 100px 0 150px 0;
-	-webkit-animation: slide 15s infinite;
-	-moz-animation: slide 15s infinite;
-	animation: slide 15s ease infinite;
+	padding: 80px 10px 150px 10px;
+	-webkit-animation: slide 20s infinite;
+	-moz-animation: slide 20s infinite;
+	animation: slide 20s ease infinite;
 	transition: all 0.3s ease;
 	&_title {
 		font-size: 50px;
@@ -64,16 +64,16 @@
 
 @keyframes slide {
 	0% {
-		background-image: url("../img/bg1.jpeg");
+		background-image: url("/img/bg1.jpeg")
 	}
 	33% {
-		background-image: url("../img/bg2.jpeg");
+		background-image: url("/img/bg2.jpeg")
 	}
 	66% {
-		background-image: url("../img/bg3.jpeg");
+		background-image: url("/img/bg3.jpeg")
 	}
 	100% {
-		background-image: url("../img/bg4.jpeg");
+		background-image: url("/img/bg4.jpeg")
 	}
 }
 

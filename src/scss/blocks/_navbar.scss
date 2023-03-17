@@ -12,10 +12,16 @@
 }
 .logo {
 	display: block;
-	color: #000;
 	text-align: center;
 	letter-spacing: 2px;
-
+	a {
+		font-size: 10px;
+		color:#000;
+		&:hover {
+			cursor: none;
+			color: #000;
+		}
+	}
 }
 .menu {
 	display: flex;
@@ -107,5 +113,14 @@ height: 24px;
 	.container{
 		width: 100%;
 		overflow-y: scroll;
+	}
+	.header {
+		height: 60px;
+	}
+	.logo {
+		width: 50%;
+		img {
+			width: 70%;
+		}
 	}
 }

@@ -1,5 +1,5 @@
 .form {
-	padding: 30px 10px;
+	padding: 100px 10px 30px 10px;
 	min-height: 100vh;
 	background-repeat: no-repeat;
 	background-image: url("../img/bg4.jpeg");
@@ -11,7 +11,15 @@
 		justify-content: center;
 	}
 	&_title{
+		text-align: center;
 		font-size: 40px;
+	}
+	.small {
+		display: flex;
+		justify-content: space-between;
+		&_item {
+			width: 47%;
+		}
 	}
 	&_item {
 		margin-top: 20px;
@@ -23,7 +31,7 @@
 		width: 100%;
 		font-size: 18px;
 		&:focus{
-			box-shadow: 0 0 15px rgba(255, 145, 0, 0.732);
+			box-shadow: 0 0 20px rgba(231, 226, 220, 0.732);
 		}
 	}
 	&_select {
@@ -69,15 +77,23 @@
 		width: 100%;
 	}
 	.form{
-		padding: 28px 10px;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 80px 10px;
 		&_title{
-			font-size: 28px;
+			font-size: 24px;
 		}
 		&_item {
-			margin-top: 18px;
+			margin-top: 10px;
 		}
 		&_input {
 			height: 40px;
+		}
+		&_button {
+			min-height: 50px;
 		}
 	}
 }

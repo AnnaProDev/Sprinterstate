@@ -1,4 +1,3 @@
-import imagemin from "gulp-imagemin";
 import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
@@ -8,7 +7,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	const menuItem = document.querySelectorAll('.menu_item');
 	const hamburger = document.querySelector('.hamburger');
 	const body = document.querySelector('body');
-
 
 	hamburger.addEventListener('click', () => {
 		hamburger.classList.toggle('hamburger_active');
