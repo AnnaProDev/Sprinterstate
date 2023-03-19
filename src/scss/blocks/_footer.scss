@@ -48,20 +48,6 @@
 
 }
 
-@media (max-width: 575px) {
-	.container{
-		position: relative;
-	}
-	.footer {
-		position:fixed;
-		bottom: 0px;
-		width: 100%;
-		background: rgba(255, 255, 255, 0.4);
-		overflow: hidden;
-	}
-
-}
-
 @media (max-width: 479.98px) {
 	.container{
 		width: 100%;

@@ -1,5 +1,5 @@
 //<MIXINS>======================================================================================
-@import "base/mixins";
+//@import "base/mixins";
 //</MIXINS>======================================================================================
 //<FONTS>=======================================================================================
 
@@ -23,8 +23,8 @@
 //<VARIABLES>====================================================================================
 $main-color: #3498db;
 $minWidth: 320px;
-$maxWidth: 1920;
-$maxWidthContainer: 1170;
+$maxWidth: 1920px;
+$maxWidthContainer: 1170px;
 $md1: calc(var($maxWidthContainer) + 10px);
 $md2: 991.98;
 $md3: 767.98;
@@ -49,10 +49,11 @@ body {
 @import "blocks/solutions";
 @import "blocks/footer";
 @import "blocks/form";
+@import "blocks/button";
 //</cover>===================================================================================
 
 //<MAIN LAYOUT>=================================================================================
-._container {
+.container {
 	min-width: calc(var($maxWidthContainer) + 10px);
 	margin: 0 auto;
 	@media (max-width: $md1) {

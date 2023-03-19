@@ -37,7 +37,7 @@
     "gulp-webp-html-nosvg": "latest",
     "gulp-webpcss": "latest",
     "gulp-zip": "latest",
-    "sass": "latest",
+    "sass": "^1.59.3",
     "swiper": "latest",
     "webp-converter": "2.2.3",
     "webpack": "latest",
