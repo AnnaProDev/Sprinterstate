@@ -3,7 +3,7 @@
 	@@include('html/head.html')
 <body>
 	@@include('html/header.html')
-	<div class="form">
+	<div class="form" style="background-image: url('@img/bg3.jpeg');">
 		<div class="container">
 			<div class="form_wrapper">
 				<form id="form" action="#" class="form_body">
@@ -21,15 +21,15 @@
 					<div class="form_item">
 						<input required type="email" name ="email" class="form_input" placeholder="Email">
 					</div>
-					<div class="form_item small">
-						<input type="text" name ="weight" class="form_input small_item" placeholder="Weight, lb">
-						<input type="text" name ="dimensions" class="form_input small_item" placeholder="Dimensions">
-					</div>
 					<div class="form_item">
 						<input type="text" name ="pickup" class="form_input" placeholder="Pickup Location">
 					</div>
 					<div class="form_item">
 						<input type="text" name ="drop-off" class="form_input" placeholder="Drop-off Location">
+					</div>
+					<div class="form_item small">
+						<input type="text" name ="weight" class="form_input small_item" placeholder="Weight, lb">
+						<input type="text" name ="dimensions" class="form_input small_item" placeholder="Dimensions">
 					</div>
 					<div class="form_item">
 						<select name ="type" class="form_select">

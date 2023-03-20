@@ -2,7 +2,6 @@
 	padding: 100px 10px 30px 10px;
 	min-height: 100vh;
 	background-repeat: no-repeat;
-	background-image: url("../../img/bg3.jpeg");
 	background-position: center center;
 	color: #fff;
 	&_wrapper {
@@ -30,9 +29,15 @@
 		border-radius: 5px;
 		width: 100%;
 		font-size: 18px;
-		background-color: rgba(255, 255, 255, 0.7);
+		background-color: rgba(255, 255, 255, 0.3);
+		border: 1px solid #bbb;
+		color: #fff;
 		&:focus{
 			box-shadow: 0 0 20px rgba(231, 226, 220, 0.732);
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+		&::placeholder {
+			color: #fff;
 		}
 	}
 	&_select {
@@ -43,7 +48,13 @@
 		padding: 0 20px;
 		appearance: none;
 		overflow: hidden;
-		background-color: rgba(255, 255, 255, 0.7);
+		background-color: rgba(255, 255, 255, 0.3);
+		border: 1px solid #bbb;
+		color: #fff;
+		&:focus{
+			box-shadow: 0 0 20px rgba(231, 226, 220, 0.732);
+			background-color: rgba(0, 0, 0, 0.7);
+		}
 	}
 	&_button {
 		display: flex;
@@ -57,7 +68,7 @@
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		color:#fff;
-		background: rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.6);
 		cursor: pointer;
 		padding: 14px 15px;
 		border: 1px solid #fff;
