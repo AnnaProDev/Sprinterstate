@@ -7,8 +7,8 @@
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400;500;700&display=swap&_v=20230319130741" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230319130741">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
 	<title>Sprinterstate</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="logo">
-				<a href="#https://sprinterstate.com#" class="logo_link"><picture><source srcset="img/Site-Logo3.webp" type="image/webp"><img src="img/Site-Logo3.png" alt="logo"></picture> SPRINTERSTATE </a>
+				<a href="#https://sprinterstate.com#" class="logo_link"><img src="img/Site-Logo3.png" alt="logo"> SPRINTERSTATE </a>
 			</div>
 				<ul class="menu">
 					<li class="menu_item"><a href="#" class="menu_link">Home</a></li>
@@ -31,23 +31,23 @@
 		<span></span>
 	</div>
 </header>
-	<div class="form" style="background-image: url('img/bg3.jpeg');">
+	<div id="form" class="form" style="background-image: url('img/bg3.jpeg');">
 		<div class="container">
 			<div class="form_wrapper">
-				<form id="form" action="#" class="form_body">
+				<form  action="#" class="form_body">
 					<h1 class="form_title">GET A FREIGHT QUOTE</h1>
 					<div class="form_item">
 						<input type="text" name ="company" class="form_input" placeholder="Company Name / MC #">
 					</div>
 					<div class="form_item small">
-						<input type="text" name ="FirstName" class="form_input small_item" placeholder="First Name">
+						<input required type="text" name ="FirstName" class="form_input small_item _req" placeholder="First Name*">
 						<input type="text" name ="LastName" class="form_input small_item" placeholder="Last Name">
 					</div>
 					<div class="form_item">
-						<input required type="phone" name ="phone" class="form_input" placeholder="Phone +1 777 777 77 77">
+						<input required id="phone" type="phone" name ="phone" class="form_input _req" placeholder="(777) 777-7777*">
 					</div>
 					<div class="form_item">
-						<input required type="email" name ="email" class="form_input" placeholder="Email">
+						<input required type="email" name ="email" class="form_input _req _email" placeholder="Email*">
 					</div>
 					<div class="form_item">
 						<input type="text" name ="pickup" class="form_input" placeholder="Pickup Location">
@@ -85,7 +85,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://kit.fontawesome.com/fcd158c583.js?_v=20230319130741" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20230319130741"></script>
+	<script src="https://kit.fontawesome.com/fcd158c583.js" crossorigin="anonymous"></script>
+	<script src="js/app.min.js"></script>
 </body>
 </html>
