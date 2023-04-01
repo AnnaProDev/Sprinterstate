@@ -97,14 +97,29 @@
 
 @media (max-width: 479.98px) {
 	.button {
+		&:after {
+			transform: none;
+		}
 		&:link {
 			&:hover {
-				color: rgba(255, 255, 255, 0.2);
+				color: rgba(255, 255, 255, 0.3);
+				color: #fff;
+			}
+			&::after {
+				background: rgba(255, 255, 255, 0.3);
+				color: #fff;
 			}
 		}
 		&:visited{
+			background: rgba(255, 255, 255, 0.3);
+			color: #fff;
 			&:hover {
-				display: unset;
+				background: rgba(255, 255, 255, 0.3);
+				color: #fff;
+			}
+			&:after {
+				background: rgba(255, 255, 255, 0.3);
+				color: #fff;
 			}
 		}
 

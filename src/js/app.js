@@ -1,10 +1,10 @@
 import * as flsFunctions from "./modules/functions.js";
-//import * as validation from "./modules/validation";
+import $ from "jquery";
 
 flsFunctions.isWebp();
 
 //Mask for phone number
-document.getElementById('phone').addEventListener('input', function (e) {
+$('phone').on('input', function (e) {
 	var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
 	e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
  });
@@ -12,7 +12,7 @@ document.getElementById('phone').addEventListener('input', function (e) {
  //Validation for form
  document.addEventListener('DOMContentLoaded', function() {
 	const form = document.getElementById('form');
-	form.addEventListener('submit', formSend);
+	$('form').on('submit', formSend);
 
 	 async function formSend(e) {
 		e.preventDefault();
@@ -23,13 +23,11 @@ document.getElementById('phone').addEventListener('input', function (e) {
 
 		if (error === 0) {
 			form.classList.add('_sending');
-			let response = await fetch ('mailer/sendmail.php', {
+			let response = await fetch('sendmail.php', {
 				method: 'POST',
 				body: formData
 			});
-			if (response.ok) {
-				let result = await response.json();
-				alert(result.message);
+			if (response.status === 200) {
 				form.reset();
 				form.classList.remove('_sending')
 			} else {
@@ -81,6 +79,8 @@ document.getElementById('phone').addEventListener('input', function (e) {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+
+	//Menu
 	const menu = document.querySelector('.menu');
 	const menuItem = document.querySelectorAll('.menu_item');
 	const hamburger = document.querySelector('.hamburger');
@@ -102,16 +102,27 @@ window.addEventListener('DOMContentLoaded', () => {
 	body.addEventListener('click', () => {
 		body.classList.toggle('lock');
 	});
+
+	//Animation for background
+	const numBgColors = $('.bg_grad').length;
+	const bggrads = $('.bg_grad');
+	let activeIndex = 0;
+	const bgtrans = setInterval(function () {
+		if (numBgColors == 0) {
+			return 
+		} else {
+			bggrads[activeIndex].classList.remove('active');
+			activeIndex = (activeIndex + 1) % numBgColors;
+			bggrads[activeIndex].classList.add('active');
+		}
+	}, 7000);
+
+	// Modal
+	$(".form_button").on("click", function(){
+		$(".overlay, #thanks").fadeIn("slow");
+	});
+	$(".modal_close").on("click", function(){
+		$(".overlay, #thanks").fadeOut("slow");
+	});
 })
 
-window.addEventListener('DOMContentLoaded', function () {
-	var transTime = 7000;
-	var numBgColors = document.querySelectorAll('.bg_grad').length;
-	var bggrads = document.querySelectorAll('.bg_grad');
-	var activeIndex = 0;
-	var bgtrans = setInterval(function () {
-	  bggrads[activeIndex].classList.remove('active');
-	  activeIndex = (activeIndex + 1) % numBgColors;
-	  bggrads[activeIndex].classList.add('active');
-	}, transTime);
- });

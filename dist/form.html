@@ -14,16 +14,14 @@
 <body>
 	<header class="header">
 	<div class="container">
-		<div class="row">
-			<div class="logo">
-				<a href="#https://sprinterstate.com#" class="logo_link"><img src="img/Site-Logo3.png" alt="logo"> SPRINTERSTATE </a>
-			</div>
-				<ul class="menu">
-					<li class="menu_item"><a href="#" class="menu_link">Home</a></li>
-					<li class="menu_item"><a href="#" class="menu_link">Driver school</a></li>
-					<li class="menu_item"><a href="#" class="menu_link">For brokers</a></li>
-				</ul>
+		<div class="logo">
+			<a href="#https://sprinterstate.com#" class="logo_link"><img src="img/Site-Logo3.png" alt="logo"> SPRINTERSTATE </a>
 		</div>
+		<ul class="menu">
+			<li class="menu_item"><a href="#" class="menu_link">Home</a></li>
+			<li class="menu_item"><a href="#" class="menu_link">Driver school</a></li>
+			<li class="menu_item"><a href="#" class="menu_link">For brokers</a></li>
+		</ul>
 	</div>
 	<div class="hamburger">
 		<span></span>
@@ -31,10 +29,10 @@
 		<span></span>
 	</div>
 </header>
-	<div id="form" class="form" style="background-image: url('img/bg3.jpeg');">
+	<div class="form" style="background-image: url('img/bg3.jpeg');">
 		<div class="container">
 			<div class="form_wrapper">
-				<form  action="#" class="form_body">
+				<form  id="form" action="#" class="form_body">
 					<h1 class="form_title">GET A FREIGHT QUOTE</h1>
 					<div class="form_item">
 						<input type="text" name ="company" class="form_input" placeholder="Company Name / MC #">
@@ -53,7 +51,7 @@
 						<input type="text" name ="pickup" class="form_input" placeholder="Pickup Location">
 					</div>
 					<div class="form_item">
-						<input type="text" name ="drop-off" class="form_input" placeholder="Drop-off Location">
+						<input type="text" name ="dropOff" class="form_input" placeholder="Drop-off Location">
 					</div>
 					<div class="form_item small">
 						<input type="text" name ="weight" class="form_input small_item" placeholder="Weight, lb">
@@ -83,6 +81,13 @@
 					<button type="submit" class="form_button">SEND</button>					
 				</form>
 			</div>
+		</div>
+	</div>
+	<div class="overlay">
+		<div class="modal" id="thanks">
+			<div class="modal_close">&times;</div>
+			<div class="modal_subtitle">Thank you for your application!</div>
+			<div class="modal_descr">Our manager will contact you soon!</div>			
 		</div>
 	</div>
 	<script src="https://kit.fontawesome.com/fcd158c583.js" crossorigin="anonymous"></script>
