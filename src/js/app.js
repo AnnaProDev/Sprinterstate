@@ -1,18 +1,21 @@
 import * as flsFunctions from "./modules/functions.js";
-import $ from "jquery";
 
 flsFunctions.isWebp();
 
 //Mask for phone number
-$('phone').on('input', function (e) {
+if (document.getElementById('phone')) {
+document.getElementById('phone').addEventListener('input', function (e) {
 	var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
 	e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
  });
+}
 
  //Validation for form
+
  document.addEventListener('DOMContentLoaded', function() {
+	if (document.getElementById('form')) {
 	const form = document.getElementById('form');
-	$('form').on('submit', formSend);
+	form.addEventListener('submit', formSend);
 
 	 async function formSend(e) {
 		e.preventDefault();
@@ -38,7 +41,7 @@ $('phone').on('input', function (e) {
 			alert("Please fill out the required fields")
 		}
 	 }
-
+	
 	 function formValidate(form) {
 		let error = 0;
 		let formReq = document.querySelectorAll('._req');
@@ -61,6 +64,7 @@ $('phone').on('input', function (e) {
 		}
 		return error;
 	 }
+	
 
 	 function formAddError(input) {
 		input.parentElement.classList.add('_error');
@@ -71,6 +75,7 @@ $('phone').on('input', function (e) {
 		input.parentElement.classList.remove('_error');
 		input.classList.remove('_error');
 	 }
+	}
 
 	 //Function for test email
 	 function emailTest(input) {
@@ -104,25 +109,42 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 
 	//Animation for background
-	const numBgColors = $('.bg_grad').length;
-	const bggrads = $('.bg_grad');
-	let activeIndex = 0;
-	const bgtrans = setInterval(function () {
-		if (numBgColors == 0) {
-			return 
-		} else {
-			bggrads[activeIndex].classList.remove('active');
-			activeIndex = (activeIndex + 1) % numBgColors;
-			bggrads[activeIndex].classList.add('active');
-		}
-	}, 7000);
+	if (document.querySelectorAll('.bg_grad').length != 0 ) {
+		var transTime = 7000;
+		var numBgColors = document.querySelectorAll('.bg_grad').length;
+		var bggrads = document.querySelectorAll('.bg_grad');
+		var activeIndex = 0;
+		var bgtrans = setInterval(function () {
+		  bggrads[activeIndex].classList.remove('active');
+		  activeIndex = (activeIndex + 1) % numBgColors;
+		  bggrads[activeIndex].classList.add('active');
+		}, transTime);
+	}
+
 
 	// Modal
-	$(".form_button").on("click", function(){
-		$(".overlay, #thanks").fadeIn("slow");
+	if (document.querySelector('.form_button')) {
+	// Get the button and the modal elements
+	const button = document.querySelector('.form_button');
+	const overlay = document.querySelector('.overlay');
+	const modal = document.querySelector('#thanks');
+	const close = document.querySelector('.modal_close');
+
+	// Add a click event listener to the button
+	button.addEventListener('click', function() {
+	// Show the overlay and the modal
+	overlay.style.display = 'block';
+	modal.style.display = 'block';
 	});
-	$(".modal_close").on("click", function(){
-		$(".overlay, #thanks").fadeOut("slow");
+
+	// Add a click event listener to the close button
+	close.addEventListener('click', function() {
+	// Hide the overlay and the modal
+	overlay.style.display = 'none';
+	modal.style.display = 'none';
 	});
+}
 })
+
+
 

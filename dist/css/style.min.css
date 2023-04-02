@@ -808,6 +808,9 @@ body._lock {
 
 @media (max-width: 479.98px) {
   .button:after {
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
     transform: none;
   }
   .button:link:hover {
