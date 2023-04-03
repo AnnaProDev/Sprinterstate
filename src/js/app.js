@@ -33,6 +33,27 @@ document.getElementById('phone').addEventListener('input', function (e) {
 			if (response.status === 200) {
 				form.reset();
 				form.classList.remove('_sending')
+				if (document.querySelector('.form_button')) {
+					// Get the button and the modal elements
+					const button = document.querySelector('.form_button');
+					const overlay = document.querySelector('.overlay');
+					const modal = document.querySelector('#thanks');
+					const close = document.querySelector('.modal_close');
+				
+					// Add a click event listener to the button
+					button.addEventListener('click', function() {
+					// Show the overlay and the modal
+					overlay.style.display = 'block';
+					modal.style.display = 'block';
+					});
+				
+					// Add a click event listener to the close button
+					close.addEventListener('click', function() {
+					// Hide the overlay and the modal
+					overlay.style.display = 'none';
+					modal.style.display = 'none';
+					});
+				}
 			} else {
 				alert("Error");
 				form.classList.remove('_sending')
@@ -121,29 +142,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		}, transTime);
 	}
 
-
-	// Modal
-	if (document.querySelector('.form_button')) {
-	// Get the button and the modal elements
-	const button = document.querySelector('.form_button');
-	const overlay = document.querySelector('.overlay');
-	const modal = document.querySelector('#thanks');
-	const close = document.querySelector('.modal_close');
-
-	// Add a click event listener to the button
-	button.addEventListener('click', function() {
-	// Show the overlay and the modal
-	overlay.style.display = 'block';
-	modal.style.display = 'block';
-	});
-
-	// Add a click event listener to the close button
-	close.addEventListener('click', function() {
-	// Hide the overlay and the modal
-	overlay.style.display = 'none';
-	modal.style.display = 'none';
-	});
-}
 })
 
 
