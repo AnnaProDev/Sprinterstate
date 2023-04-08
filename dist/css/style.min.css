@@ -711,6 +711,16 @@ body._lock {
   .form_button {
     min-height: 50px;
   }
+  .form_button:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .form_button:active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.6);
+    top: 0px;
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  }
 }
 .button:link {
   position: relative;

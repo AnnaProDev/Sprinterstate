@@ -11,14 +11,20 @@ document.getElementById('phone').addEventListener('input', function (e) {
 }
 
  //Validation for form
-
  document.addEventListener('DOMContentLoaded', function() {
 	if (document.getElementById('form')) {
 	const form = document.getElementById('form');
 	form.addEventListener('submit', formSend);
 
+
 	 async function formSend(e) {
 		e.preventDefault();
+
+		let buttons = this.querySelectorAll('button[type=submit]');
+		for (var i = 0; i < buttons.length; i++) {
+		buttons[i].disabled = true;
+		}
+
 
 		let error = formValidate(form);
 
@@ -33,27 +39,7 @@ document.getElementById('phone').addEventListener('input', function (e) {
 			if (response.status === 200) {
 				form.reset();
 				form.classList.remove('_sending')
-				if (document.querySelector('.form_button')) {
-					// Get the button and the modal elements
-					const button = document.querySelector('.form_button');
-					const overlay = document.querySelector('.overlay');
-					const modal = document.querySelector('#thanks');
-					const close = document.querySelector('.modal_close');
-				
-					// Add a click event listener to the button
-					button.addEventListener('click', function() {
-					// Show the overlay and the modal
-					overlay.style.display = 'block';
-					modal.style.display = 'block';
-					});
-				
-					// Add a click event listener to the close button
-					close.addEventListener('click', function() {
-					// Hide the overlay and the modal
-					overlay.style.display = 'none';
-					modal.style.display = 'none';
-					});
-				}
+				modal();
 			} else {
 				alert("Error");
 				form.classList.remove('_sending')
@@ -86,7 +72,6 @@ document.getElementById('phone').addEventListener('input', function (e) {
 		return error;
 	 }
 	
-
 	 function formAddError(input) {
 		input.parentElement.classList.add('_error');
 		input.classList.add('_error');
@@ -97,6 +82,21 @@ document.getElementById('phone').addEventListener('input', function (e) {
 		input.classList.remove('_error');
 	 }
 	}
+	//Pop up after submit
+	function modal() {
+			const overlay = document.querySelector('.overlay');
+			const modal = document.querySelector('#thanks');
+			const close = document.querySelector('.modal_close');
+
+			overlay.style.display = 'block';
+			modal.style.display = 'block';
+		
+			close.addEventListener('click', function() {
+
+			overlay.style.display = 'none';
+			modal.style.display = 'none';
+			});
+	}
 
 	 //Function for test email
 	 function emailTest(input) {
@@ -105,8 +105,7 @@ document.getElementById('phone').addEventListener('input', function (e) {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-
-	//Menu
+	//Menu-hamburger
 	const menu = document.querySelector('.menu');
 	const menuItem = document.querySelectorAll('.menu_item');
 	const hamburger = document.querySelector('.hamburger');
@@ -141,7 +140,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		  bggrads[activeIndex].classList.add('active');
 		}, transTime);
 	}
-
 })
 
 
