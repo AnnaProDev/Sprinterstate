@@ -119,12 +119,14 @@ body._lock {
 .menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 18px 70px;
   margin: 0;
   list-style-type: none;
-  width: 50%;
+  width: 80%;
 }
 .menu_link {
+  font-family: Poppins;
   font-weight: 500;
   font-size: 16px;
   color: #000;
@@ -142,7 +144,7 @@ body._lock {
     position: fixed;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     top: 0;
     left: -100%;
     width: 50%;
@@ -160,7 +162,7 @@ body._lock {
     margin: 20px 0;
   }
   .menu_link {
-    font-size: 26px;
+    font-size: 22px;
   }
   .menu_link a {
     display: block;
@@ -230,22 +232,24 @@ body._lock {
   text-align: center;
 }
 .promo_img {
-  margin-top: 60px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 60px;
+  justify-content: center;
 }
 .promo_img img {
-  display: block;
-  height: 75px;
+  height: 200px;
 }
 .promo_descr {
   margin: 20px auto;
   max-width: 500px;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #FFFFFF;
   text-align: center;
+}
+.promo span:hover {
+  color: #b27d33;
 }
 
 .bg_grad {
@@ -293,7 +297,8 @@ body._lock {
     right: 0;
   }
   .promo_title {
-    font-size: 40px;
+    font-size: 35px;
+    letter-spacing: 2px;
   }
   .promo_info {
     display: flex;
@@ -303,18 +308,23 @@ body._lock {
   }
   .promo_descr {
     font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5em;
   }
   .promo_img {
     margin-top: 0;
   }
   .promo_img img {
-    height: 50px;
+    height: 100%;
   }
 }
 .about {
   min-height: 715px;
   padding: 70px 130px;
   background-color: #fff;
+}
+.about .container {
+  width: 1170px;
 }
 .about_items {
   display: flex;
@@ -335,6 +345,7 @@ body._lock {
   min-height: 170px;
   margin: 10px;
   color: #1490d7;
+  border-radius: 10px;
 }
 .about_item i {
   display: block;
@@ -342,10 +353,11 @@ body._lock {
   line-height: 32px;
 }
 .about_item h3 {
+  font-family: "Poppins", sans-serif;
   margin-top: 30px;
   text-align: center;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   color: #000;
 }
 .about_item:hover {
@@ -368,10 +380,15 @@ body._lock {
 }
 .about_subtitle {
   font-size: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 .about_text {
-  font-size: 14px;
+  margin-top: 10px;
+  font-size: 16px;
   line-height: 26px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 .about_list {
   margin-top: 30px;
@@ -384,6 +401,8 @@ body._lock {
   position: relative;
   font-size: 16px;
   margin-bottom: 7px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 .about_list li::before {
   content: "";
@@ -432,10 +451,15 @@ body._lock {
   padding: 45px 0;
 }
 .solutions_title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   font-size: 36px;
   text-align: center;
 }
 .solutions_subtitle {
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   text-align: center;
 }
@@ -463,12 +487,14 @@ body._lock {
   width: 100%;
 }
 .solutions_item_title {
+  font-family: Poppins;
   padding: 0 20px;
   font-size: 18px;
   margin-top: 30px;
   font-weight: 600;
 }
 .solutions_item_text {
+  font-family: Raleway;
   padding: 0 20px;
   margin-top: 10px;
   font-size: 14px;
@@ -481,9 +507,10 @@ body._lock {
   font-size: 12px;
   color: #5a596a;
   text-align: center;
+  font-family: Raleway;
   font-weight: 700;
   line-height: 26px;
-  max-width: 68px;
+  max-width: 70px;
   border-bottom: 1px solid #5a596a;
 }
 .solutions_item_link:hover {
@@ -533,13 +560,14 @@ body._lock {
 }
 .footer_links a {
   color: #fff;
+  font-size: 16px;
 }
 .footer_social {
   display: flex;
   justify-content: space-around;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
 }
 .footer_social a {
   color: #fff;
@@ -733,12 +761,12 @@ body._lock {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.3);
   color: #fff;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
-  letter-spacing: 0.08em;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;

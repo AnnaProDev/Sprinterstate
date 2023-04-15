@@ -32,11 +32,13 @@
 .menu {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 18px 70px;
 	margin: 0;
 	list-style-type: none;
-	width: 50%;
+	width: 80%;
 	&_link {
+		font-family: Poppins;
 		font-weight: 500;
 		font-size: 16px;
 		color: #000;
@@ -55,7 +57,7 @@
 position: fixed;
 flex-direction: column;
 justify-content: center;
-align-items: center;
+align-items: start;
 top: 0;
 left: -100%;
 width: 50%;
@@ -72,7 +74,7 @@ transition: 0.6s all;
 		margin: 20px 0;
 	}
 	&_link {
-		font-size: 26px;
+		font-size: 22px;
 		a {
 			display: block;
 		}

@@ -1,4 +1,7 @@
 .about {
+	.container{
+		width: $maxWidthContainer;
+	}
 	min-height: 715px;
 	padding: 70px 130px;
 	background-color: #fff;
@@ -21,16 +24,18 @@
 		min-height: 170px;
 		margin: 10px;
 		color: #1490d7;
+		border-radius: 10px;
 		i {
 			display: block;
 			font-size: 30px;
 			line-height: 32px;
 		}
 		h3 {
+			font-family: 'Poppins', sans-serif;
 			margin-top: 30px;
 			text-align: center;
 			font-size: 16px;
-			font-weight: bold;
+			font-weight: 500;
 			color: #000;
 		}
 		&:hover {
@@ -54,10 +59,15 @@
 	}
 	&_subtitle {
 		font-size: 24px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
 	}
 	&_text {
-		font-size: 14px;
+		margin-top: 10px;
+		font-size: 16px;
 		line-height: 26px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
 	}
 	&_list {
 		margin-top: 30px;
@@ -69,6 +79,8 @@
 			position: relative;
 			font-size: 16px;
 			margin-bottom: 7px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
 			&::before {
 				content: "";
 				display: block;
