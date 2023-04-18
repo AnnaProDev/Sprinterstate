@@ -15,8 +15,8 @@
 			<div class="promo_info">
 				<h1 class="promo_title">OVER THE ROAD</h1>
 				<h2 class="promo_descr">Welcome to <span>SPRINTERSTATE</span>, your premier truck company for all your transportation needs! Our company specializes in providing top-of-the-line trucks and exceptional customer service to ensure your transportation needs are met with ease and efficiency.</h2>
-				<div class="promo_img">
-					<img src="@img/icons/Group-tracks.svg" alt="Trucks">
+				<div data-aos="fade-left" data-aos-duration="1000" class="promo_img">
+					<img src="svgicons/Group-tracks.svg" alt="Trucks">
 				</div>
 				<a class="button" href="form.html" >GET A FREIGHT QUOTE</a> 
 			</div>
@@ -71,7 +71,7 @@
 			</div>
 		</div>
 	</section>
-	<section class ="solutions">
+	<section class ="solutions" style="background-image: url('@img/bg-s.jpeg')">
 		<div class="container">
 			<div class="row">
 				<h3 class="solutions_title">Sprinterstate it is Good solutions for your business!</h3>
@@ -101,6 +101,10 @@
 	</section>
 	@@include('html/footer.html')
 	<script src="https://kit.fontawesome.com/fcd158c583.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	 </script>
 	<script src="js/app.min.js"></script>
 </body>
 </html>
